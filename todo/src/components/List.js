@@ -1,10 +1,10 @@
 import React from 'react';
+import Todo from './Todo';
 
-const List = () => {
+const List = ({data}) => {
     return (
         <div className="list-of-todos">
-            <p>stuff will go here</p>
-            <p>and here</p>
+            {data.map(todo => <Todo todo={todo} />)}
         </div>
     )
 }
