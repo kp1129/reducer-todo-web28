@@ -1,11 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
+import { ADD_TODO } from '../reducers/todoReducer';
 
-const Form = () => {
+const Form = ({dispatch}) => {
+    const [task, setTask] = useState("");
+
+    const handleChange = (e) => {
+        setTask(e.target.value);
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        dispatch({ type: ADD_TODO, payload: task });
+        setTask("");
+    }
     return (
         <div className="user-controls">
-            <form>
+            <form onSubmit={handleSubmit} >
                 <label htmlFor="add-todo">
-                    <input type="text" id="add-todo" name="add-todo" />
+                    <input type="text" id="add-todo" name="add-todo" value={task} onChange={handleChange} />
                 </label>
                 <button type="submit">add todo</button>
             </form>

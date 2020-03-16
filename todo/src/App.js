@@ -12,7 +12,7 @@ const App = () => {
     <div className="App">
      <Title />
      <List data={state.todos}/>
-     <Form />
+     <Form dispatch={dispatch} />
     </div>
   );
 }
