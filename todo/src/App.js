@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div className="App">
      <Title />
-     <List data={state.todos}/>
+     <List data={state.todos} dispatch={dispatch}/>
      <Form dispatch={dispatch} />
     </div>
   );

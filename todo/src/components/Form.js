@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { ADD_TODO } from '../reducers/todoReducer';
+import { ADD_TODO, CLEAR_COMPLETED } from '../reducers/todoReducer';
 
 const Form = ({dispatch}) => {
     const [task, setTask] = useState("");
@@ -21,7 +21,7 @@ const Form = ({dispatch}) => {
                 </label>
                 <button type="submit">add todo</button>
             </form>
-            <button>clear completed</button>
+            <button onClick={() => dispatch({ type: CLEAR_COMPLETED })}>clear completed</button>
         </div>
     )
 }
