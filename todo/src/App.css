@@ -2,7 +2,59 @@
   text-align: center;
 }
 
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+.list-of-todos {
+  border: 1px dotted black;
+  width: fit-content;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  text-align: center;
+ 
+}
+
+.todo {
+  font-size: 1.75rem;
+  cursor: pointer;
+  width: fit-content;
+  margin: 2rem auto;
+}
+
 .completed {
   color: gray;
   text-decoration: line-through;
 }
+
+input {
+  border: 2px solid #1abc9c;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+.addBtn {
+  height: 3.1rem;
+  padding: 0 1.5rem;
+  margin: 0 2px;
+  font-size: 1.5rem;
+  border: 2px solid #1abc9c;
+  background-color:#1abc9c;
+  border-radius: 5px;
+}
+
+.clearBtn {
+  height: 3.1rem;
+  padding: 0 1.5rem;
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  border: 1px solid #d35f6a;
+  background-color: #d35f6a;
+  border-radius: 5px;
+}
+

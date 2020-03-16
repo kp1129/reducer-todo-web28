@@ -17,11 +17,11 @@ const Form = ({dispatch}) => {
         <div className="user-controls">
             <form onSubmit={handleSubmit} >
                 <label htmlFor="add-todo">
-                    <input type="text" id="add-todo" name="add-todo" value={task} onChange={handleChange} />
+                    <input type="text" id="add-todo" name="add-todo" value={task} placeholder="add things to do" onChange={handleChange} />
                 </label>
-                <button type="submit">add todo</button>
+                <button className="addBtn" type="submit">add todo</button>
             </form>
-            <button onClick={() => dispatch({ type: CLEAR_COMPLETED })}>clear completed</button>
+            <button className="clearBtn" onClick={() => dispatch({ type: CLEAR_COMPLETED })}>clear completed</button>
         </div>
     )
 }
